@@ -12,7 +12,7 @@ div.navbar
           for navitem in navbar
             if (navitem.sub)
               li.dropdown
-                a(href='#', data-toggle='dropdown', class='dropdown-toggle') #{t(navitem.key)} 
+                a(href='#', data-target='#', data-toggle='dropdown', class='dropdown-toggle') #{t(navitem.key)} 
                   b.caret
                 ul.dropdown-menu
                   for sub in navitem.sub
