@@ -1,0 +1,16 @@
+div.navbar
+  div.navbar-inner
+    div.container
+      a(data-toggle='collapse',data-target='.nav-collapse').btn.btn-navbar
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href='/').brand #{title}
+      div.nav-collapase
+        ul.nav
+          li.divider-vertical
+          for navitem in navbar
+            - var isActiveClass = (navitem.location === route ? 'active' : '')
+            li(class = isActiveClass)
+              a(href='#{navitem.location}') #{navitem.title}
+          

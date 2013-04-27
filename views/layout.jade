@@ -1,7 +1,18 @@
 doctype 5
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title= title  
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/responsive.css')   
+    script(type='text/javascript', src='http://code.jquery.com/jquery-1.8.0.min.js')     
+    script(type='text/javascript', src='js/bootstrap-collapse.js')
   body
-    block content
+    include navbar.jade
+                    
+    div.container
+      div.row-fluid
+        block content
+      div.row-fluid
+        hr
+        div
+          include footer.jade
