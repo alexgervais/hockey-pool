@@ -1,7 +1,9 @@
 {
     "app": {
         "name": "Pool des séries",
-        "year": "2013"
+        "year": "2013",
+        "comingsoon": "À venir...",
+        "404": "Oups ..."
     },
     "nav": {
         "predictions": "Enregistrer mes prévisions",

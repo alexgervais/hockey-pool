@@ -12,6 +12,7 @@ var app = express();
 app.set('port', 8080);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
+app.use('i18n', i18n);
 //app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
@@ -32,9 +33,11 @@ i18n.registerAppHelper(app);
 
 app.get('/', routes.index);
 app.get('/predictions', routes.predictions);
-app.get('/results', routes.results);
+app.get('/results/:round', routes.results);
 app.get('/standings', routes.standings);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+app.use(routes.notFound);

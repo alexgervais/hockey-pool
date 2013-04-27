@@ -1,27 +1,52 @@
+var i18n = require("i18next");
+
 var navbar = [
     {key: "nav.predictions", location: "/predictions"},
     {key: "nav.results",
         sub: [
-            {key: "nav.rounds.1", location: "/results?round=1"},
-            {key: "nav.rounds.2", location: "/results?round=2"},
-            {key: "nav.rounds.3", location: "/results?round=3"},
-            {key: "nav.rounds.4", location: "/results?round=4"},
+            {key: "nav.rounds.1", location: "/results/1"},
+            {key: "nav.rounds.2", location: "/results/2"},
+            {key: "nav.rounds.3", location: "/results/3"},
+            {key: "nav.rounds.4", location: "/results/4"},
         ]},
     {key: "nav.standings", location: "/standings"},
 ];
 
+var rounds = [1, 2, 3, 4];
+var roundResults = [];
+
+var renderOptions = function (title, req) {
+    return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') } 
+};
+
 exports.index = function (req, res) {
-    res.render('index', { title: 'Hockey Pool', navbar: navbar, route: req.route.path });
+    res.render('index', renderOptions('Hockey Pool', req));
 };
 
 exports.predictions = function (req, res) {
-    res.render('predictions', { navbar: navbar, route: req.route.path });
+    res.render('predictions', renderOptions(i18n.t("nav.predictions"), req));
 };
 
 exports.results = function (req, res) {
-    res.render('results', { navbar: navbar, route: req.route.path });
+    var roundNo = parseInt(req.params.round);
+    
+    if (rounds.indexOf(roundNo) > -1) {
+        var title = i18n.t("nav.results") + ' - ' + i18n.t("nav.rounds." + roundNo);
+        
+        if (roundResults.indexOf(roundNo) > -1) {
+            res.render('results', renderOptions(title, req));
+        } else {
+            res.render('comingsoon', renderOptions(title, req));
+        }
+    } else {
+        res.render('404', renderOptions(i18n.t("nav.results"), req));
+    }
 };
 
 exports.standings = function (req, res) {
-    res.render('standings', { navbar: navbar, route: req.route.path });
+    res.render('standings', renderOptions(i18n.t("nav.standings"), req));
+};
+
+exports.notFound = function (req, res) {
+    res.render('404', renderOptions("404", req));
 };
