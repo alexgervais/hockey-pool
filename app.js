@@ -1,6 +1,5 @@
 var express = require('express')
     , routes = require('./routes')
-    , user = require('./routes/user')
     , http = require('http')
     , path = require('path')
     , i18n = require("i18next");
@@ -32,7 +31,9 @@ if ('development' == app.get('env')) {
 i18n.registerAppHelper(app);
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/predictions', routes.predictions);
+app.get('/results', routes.results);
+app.get('/standings', routes.standings);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

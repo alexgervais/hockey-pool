@@ -10,7 +10,16 @@ div.navbar
         ul.nav
           li.divider-vertical
           for navitem in navbar
-            - var isActiveClass = (navitem.location === route ? 'active' : '')
-            li(class = isActiveClass)
-              a(href='#{navitem.location}') #{navitem.title}
+            if (navitem.sub)
+              li.dropdown
+                a(href='#', data-toggle='dropdown', class='dropdown-toggle') #{t(navitem.key)} 
+                  b.caret
+                ul.dropdown-menu
+                  for sub in navitem.sub
+                    li
+                      a(href='#{sub.location}') #{t(sub.key)}
+            else
+              - var isActiveClass = (navitem.location === route ? 'active' : '')
+              li(class = isActiveClass)
+                a(href='#{navitem.location}') #{t(navitem.key)}
           

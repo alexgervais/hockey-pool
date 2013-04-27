@@ -2,5 +2,16 @@
     "app": {
         "name": "Pool des séries",
         "year": "2013"
+    },
+    "nav": {
+        "predictions": "Enregistrer mes prévisions",
+        "results": "Résultats",
+        "standings": "Classement",
+        "rounds": {
+            "1": "Quarts de finale",
+            "2": "Demi-finales",
+            "3": "Finales d'association",
+            "4": "Finale"
+        }
     }
 }
