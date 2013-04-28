@@ -18,14 +18,26 @@ var rounds = [1, 2, 3, 4];
 var roundResults = [];
 
 var roundRegistration = {
-    closingOn: moment("2013-04-28 14:15 -0400", "YYYY-MM-DD HH:mm ZZ"),
+    closingOn: moment("2013-04-30 20:00 -0400", "YYYY-MM-DD HH:mm ZZ"),
     round: "nav.rounds.1",
     roundPoints: "points.rounds.1",
     predictions: [
         {
-            section: "final",
+            section: "east",
             confrontations: [
-                ["mtl", "bos"]
+                ["ott", "pit"],
+                ["nyi", "mtl"],
+                ["nyr", "wsh"],
+                ["tor", "bos"]
+            ]
+        },
+        {
+            section: "west",
+            confrontations: [
+                ["min", "chi"],
+                ["det", "ana"],
+                ["sjs", "van"],
+                ["lak", "stl"]
             ]
         }
     ]
@@ -40,7 +52,9 @@ exports.index = function (req, res) {
 };
 
 exports.predictions = function (req, res) {
-    if (!roundRegistration || moment().isAfter(roundRegistration.closingOn)) {
+    if (typeof roundRegistration == 'undefined') {
+        res.render('comingsoon', renderOptions(i18n.t("nav.predictions"), req));
+    } else if (moment().isAfter(roundRegistration.closingOn)) {
         res.render('closed', renderOptions(i18n.t("nav.predictions"), req));
     } else {
         var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
