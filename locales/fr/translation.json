@@ -3,7 +3,7 @@
         "name": "Misez sur la glace",
         "year": "Séries éliminatoires 2013",
         "closing": "L'inscription pour la ronde actuelle se termine ",
-        "closed": "L'inscription pour la ronde actuelle est maintenant terminé.",
+        "closed": "L'inscription pour la ronde actuelle est maintenant terminée.",
         "thankyou": "Merci d'avoir participé et bonne chance!",
         "comingsoon": "À venir...",
         "404": "Oups ..."
@@ -21,10 +21,10 @@
     },
     "points": {
         "rounds": {
-            "1": "<strong>Quarts de finale:<br/>1 Point</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>1 Point supplémentaire</strong> si le nombre de parties correspond.",
-            "2": "<strong>Demi-finales:<br/>2 Points</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>2 Points supplémentaire</strong> si le nombre de parties correspond.",
-            "3": "<strong>Finales d'association:<br/>3 Points</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>3 Points supplémentaire</strong> si le nombre de parties correspond.",
-            "4": "<strong>Finale:<br/>4 Points</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>4 Points supplémentaire</strong> si le nombre de parties correspond."
+            "1": "<strong>Quarts de finale:<br/>1 POINT</strong> pour avoir sélectionné l'équipe vainqueur et <strong>1 POINT supplémentaire</strong> pour avoir prédit le bon nombre de parties.",
+            "2": "<strong>Demi-finales:<br/>2 POINTS</strong> pour avoir sélectionné l'équipe vainqueur et <strong>2 POINTS supplémentaire</strong> pour avoir prédit le bon nombre de parties.",
+            "3": "<strong>Finales d'association:<br/>3 POINTS</strong> pour avoir sélectionné l'équipe vainqueur et <strong>3 POINTS supplémentaire</strong> pour avoir prédit le bon nombre de parties.",
+            "4": "<strong>Finale:<br/>4 POINTS</strong> pour avoir sélectionné l'équipe vainqueur et <strong>4 POINTS supplémentaire</strong> pour avoir prédit le bon nombre de parties."
         },
         "disclamer": "Une seule prévision par personne par ronde."
     },
@@ -42,5 +42,5 @@
     "final": "Finale",
     "in": "en ",
     "games": " parties",
-    "formvalidation": "Veuillez faire toutes vos sélections et entrer votre nom et addresse courriel avant de soumettre vos prédictions."
+    "formvalidation": "Veuillez faire toutes vos sélections et entrer votre nom et votre addresse courriel avant de soumettre vos prévisions."
 }
