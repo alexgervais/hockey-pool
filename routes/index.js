@@ -17,6 +17,7 @@ var navbar = [
 var rounds = [1, 2, 3, 4];
 var roundResults = [];
 
+/*
 var roundRegistration = {
     closingOn: moment("2013-04-30 20:00 -0400", "YYYY-MM-DD HH:mm ZZ"),
     round: "nav.rounds.1",
@@ -42,6 +43,7 @@ var roundRegistration = {
         }
     ]
 };
+*/
 
 var renderOptions = function (title, req) {
     return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') }
