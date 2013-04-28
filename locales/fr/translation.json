@@ -2,6 +2,8 @@
     "app": {
         "name": "Misez sur la glace",
         "year": "Séries éliminatoires 2013",
+        "closing": "L'inscription pour la ronde actuelle se termine dans ",
+        "closed": "L'inscription pour la ronde actuelle est maintenant terminé.",
         "comingsoon": "À venir...",
         "404": "Oups ..."
     },
@@ -15,5 +17,11 @@
             "3": "Finales d'association",
             "4": "Finale"
         }
-    }
+    }, 
+    "mtl": "MTL",
+    "bos": "BOS",
+    "nyi": "NY I",
+    "nyr": "NY R",
+    "east": "Est",
+    "west": "Ouest"
 }

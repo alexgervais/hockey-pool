@@ -2,9 +2,11 @@ var express = require('express')
     , routes = require('./routes')
     , http = require('http')
     , path = require('path')
-    , i18n = require("i18next");
+    , i18n = require("i18next")
+    , moment = require("moment");
 
 i18n.init({ lng: 'fr' });
+moment.lang('fr');
 
 var app = express();
 

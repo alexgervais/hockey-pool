@@ -1,4 +1,5 @@
-var i18n = require("i18next");
+var i18n = require("i18next"),
+    moment = require('moment');
 
 var navbar = [
     {key: "nav.predictions", location: "/predictions"},
@@ -15,8 +16,15 @@ var navbar = [
 var rounds = [1, 2, 3, 4];
 var roundResults = [];
 
+var roundRegistration = {
+    closingOn: moment("2013-04-28 10:15 -0400", "YYYY-MM-DD HH:mm ZZ"),
+    round: "nav.rounds.1",
+    predictions: [[["mtl", "bos"], ["nyr", "nyi"]],
+        [["mtl", "bos"], ["nyr", "nyi"]]]
+};
+
 var renderOptions = function (title, req) {
-    return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') } 
+    return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') }
 };
 
 exports.index = function (req, res) {
@@ -24,15 +32,24 @@ exports.index = function (req, res) {
 };
 
 exports.predictions = function (req, res) {
-    res.render('predictions', renderOptions(i18n.t("nav.predictions"), req));
+    if (!roundRegistration || moment().isAfter(roundRegistration.closingOn)) {
+        res.render('closed', renderOptions(i18n.t("nav.predictions"), req));
+    } else {
+        var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
+        options.closingIn = function() {
+            return roundRegistration.closingOn.fromNow();
+        };
+        options.predictions = roundRegistration;
+        res.render('predictions', options);
+    }
 };
 
 exports.results = function (req, res) {
     var roundNo = parseInt(req.params.round);
-    
+
     if (rounds.indexOf(roundNo) > -1) {
         var title = i18n.t("nav.results") + ' - ' + i18n.t("nav.rounds." + roundNo);
-        
+
         if (roundResults.indexOf(roundNo) > -1) {
             res.render('results', renderOptions(title, req));
         } else {
