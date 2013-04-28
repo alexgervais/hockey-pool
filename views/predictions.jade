@@ -22,7 +22,7 @@ block content
              div.controls
                span #{t('in')}
                  select.input-mini(type='radio', name='confrontationGames[#{prediction.section}#{confId}]', id='confrontationGames[#{prediction.section}#{confId}]')
-                   option
+                   option 
                    option 4
                    option 5
                    option 6
@@ -41,3 +41,27 @@ block content
       p!= t(points)
       p= t('points.disclamer')
       button.btn.btn-primary(type='submit') #{t('nav.predictions')}
+    
+  script(type='text/javascript')
+    $('form').submit(function() {
+      var validate = true;
+      $('form input').each(function(){
+        var inputValue = $(this).val();
+        if($.trim(inputValue).length <= 0) {
+          validate = false;
+        }
+      });
+      $('form select').each(function(){
+        var selectValue = $(this).val();
+        if($.trim(selectValue).length <= 0) {
+          validate = false;
+        }
+      });
+      if ($("form input:radio").length / $("form input:radio:checked").length != 2) {
+        validate = false;
+      }
+      if (!validate) {
+        alert('#{t("formvalidation")}');
+        return false;
+      }
+    });

@@ -41,5 +41,6 @@
     "west": "Ouest",
     "final": "Finale",
     "in": "en ",
-    "games": " parties"
+    "games": " parties",
+    "formvalidation": "Veuillez faire toutes vos sélections et entrer votre nom et addresse courriel avant de soumettre vos prédictions."
 }
