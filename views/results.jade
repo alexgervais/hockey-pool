@@ -2,4 +2,49 @@ extends layout
 
 block content       
   h3= title
-  p #{t("app.comingsoon")}
+  if (roundResults.result.length > 0)
+    h4= t('results.series')
+    table.table.table-hover.table-condensed
+      thead
+        tr
+          th= t('results.winningteam') 
+          th= t('results.games')
+      tbody
+        for result in roundResults.result 
+          if (result[0] && result[1])
+            tr
+              td #{t(result[0])}&nbsp;
+              td #{result[1]}&nbsp;
+    hr
+    h4= t('results.participants')
+    
+  table.table.table-hover.table-condensed
+    thead
+      tr
+        th= t('results.name')
+        th= t('results.team')
+        th= t('results.games')
+        th= t('results.points')
+    tbody
+      for participant in roundResults.participants                             
+        for selection, i in participant.selections
+          - var points = 0
+          - var hasRightTeam = false
+          tr
+            if (i == 0)
+              td(rowspan=participant.selections.length)
+                strong= participant.name
+            td #{t(selection[0])}&nbsp;
+              if (roundResults.result[i] && roundResults.result[i][0] && selection[0] == roundResults.result[i][0])
+                - points += roundResults.pointScale
+                - hasRightTeam = true
+                span.badge.badge-success 
+                  i.icon-ok.icon-white
+            td #{selection[1]}&nbsp;
+              if (roundResults.result[i] && roundResults.result[i][1] && selection[1] == roundResults.result[i][1] && hasRightTeam)
+                - points += roundResults.pointScale
+                span.badge.badge-success
+                  i.icon-ok.icon-white
+            td= points
+                
+  div.alert.alert-info!= t(roundResults.roundPoints)

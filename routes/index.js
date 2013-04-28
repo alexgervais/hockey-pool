@@ -16,6 +16,26 @@ var navbar = [
 
 var rounds = [1, 2, 3, 4];
 var roundResults = [];
+roundResults[0] = {
+    roundPoints: "points.rounds.1",
+    pointScale: 1,
+    result: [
+        ["mtl", 4],
+       // [],
+       // ["tor", 5]
+    ],
+    participants: [
+        { name: "alex", selections: [
+            ["mtl", 4],
+            ["nyr", 4],
+            ["bos", 7]
+        ] },
+        { name: "julie", selections: [
+            ["mtl", 7],
+            ["nyr", 6],
+            ["tor", 5]
+        ] }
+    ]};
 
 /*
 var roundRegistration = {
@@ -91,10 +111,12 @@ exports.results = function (req, res) {
     if (rounds.indexOf(roundNo) > -1) {
         var title = i18n.t("nav.results") + ' - ' + i18n.t("nav.rounds." + roundNo);
 
-        if (roundResults.indexOf(roundNo) > -1) {
-            res.render('results', renderOptions(title, req));
+        var options = renderOptions(title, req);
+        if (typeof roundResults[roundNo] != 'undefined') {
+            options.roundResults = roundResults[roundNo];
+            res.render('results', options);
         } else {
-            res.render('comingsoon', renderOptions(title, req));
+            res.render('comingsoon', options);
         }
     } else {
         res.render('404', renderOptions(i18n.t("nav.results"), req));

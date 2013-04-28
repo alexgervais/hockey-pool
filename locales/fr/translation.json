@@ -33,6 +33,15 @@
         "name": "Nom",
         "email": "Courriel"
     },
+    "results": {
+        "series": "Résultats des séries",  
+        "winningteam": "Équipe gagnante",
+        "games": "Parties",
+        "participants": "Résultats des participants",
+        "name": "Nom",
+        "team": "Équipe",
+        "points": "Points"
+    },
     "pit": "Penguins de Pittsburgh (1)",
     "mtl": "Canadiens de Montréal (2)",
     "wsh": "Capitals de Washington (3)",
