@@ -20,7 +20,7 @@ var renderOptions = function (title, req) {
 };
 
 exports.index = function (req, res) {
-    res.render('index', renderOptions('Hockey Pool', req));
+    res.render('index', renderOptions(i18n.t("app.name"), req));
 };
 
 exports.predictions = function (req, res) {

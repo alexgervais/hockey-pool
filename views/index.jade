@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{t("app.name")}
+  div.hero-unit
+    h1= title
+    h3 #{t("app.year")}
+    a.btn.btn-primary.btn-large(href='predictions') #{t("nav.predictions")}

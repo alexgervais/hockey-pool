@@ -1,4 +1,4 @@
-div.navbar
+div.navbar.navbar-static-top
   div.navbar-inner
     div.container
       a(data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
@@ -12,7 +12,7 @@ div.navbar
           for navitem in navbar
             if (navitem.sub)
               li.dropdown
-                a(href='#', data-target='#', data-toggle='dropdown', class='dropdown-toggle') #{t(navitem.key)} 
+                a.dropdown-toggle(href='#', data-target='#', data-toggle='dropdown') #{t(navitem.key)} 
                   b.caret
                 ul.dropdown-menu
                   for sub in navitem.sub
