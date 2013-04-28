@@ -2,4 +2,42 @@ extends layout
 
 block content
   h3= title
-  div.alert.alert-block #{t("app.closing")} #{closingIn()}
+  div.alert.alert-block #{t("app.closing")} 
+    strong #{closingIn()}
+  form.form-horizontal(method='post')
+    for prediction in predictions
+      fieldset
+      legend #{t(prediction.section)}
+      each confrontation, confId in prediction.confrontations
+         div.control-group
+           label.radio
+             div.controls
+               input(type='radio', name='confrontationWinner[#{prediction.section}#{confId}]', id='confrontationWinner[#{prediction.section}#{confId}]', value='#{confrontation[0]}')
+               | #{t(confrontation[0])}
+           label.radio
+             div.controls
+               input(type='radio', name='confrontationWinner[#{prediction.section}#{confId}]', id='confrontationWinner[#{prediction.section}#{confId}]', value='#{confrontation[1]}')
+               | #{t(confrontation[1])}
+           label.select
+             div.controls
+               span #{t('in')}
+                 select.input-mini(type='radio', name='confrontationGames[#{prediction.section}#{confId}]', id='confrontationGames[#{prediction.section}#{confId}]')
+                   option
+                   option 4
+                   option 5
+                   option 6
+                   option 7
+                 | #{t('games')}
+
+    fieldset
+      legend= t('registration.info')
+      label.control-label(for='name')= t('registration.name')
+      div.controls
+        input.input-xlarge#name(type='text', name='name')
+      label.control-label(for='email')= t('registration.email')
+      div.controls
+        input.input-xlarge#email(type='text', name='email')
+    div.form-actions
+      p!= t(points)
+      p= t('points.disclamer')
+      button.btn.btn-primary(type='submit') #{t('nav.predictions')}

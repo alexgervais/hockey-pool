@@ -17,10 +17,24 @@ var rounds = [1, 2, 3, 4];
 var roundResults = [];
 
 var roundRegistration = {
-    closingOn: moment("2013-04-28 10:15 -0400", "YYYY-MM-DD HH:mm ZZ"),
+    closingOn: moment("2013-04-28 14:15 -0400", "YYYY-MM-DD HH:mm ZZ"),
     round: "nav.rounds.1",
-    predictions: [[["mtl", "bos"], ["nyr", "nyi"]],
-        [["mtl", "bos"], ["nyr", "nyi"]]]
+    roundPoints: "points.rounds.1",
+    predictions: [
+        {
+            section: "east",
+            confrontations: [
+                ["mtl", "bos"],
+                ["nyr", "nyi"]
+            ]},
+        {
+            section: "west",
+            confrontations: [
+                ["mtl", "bos"],
+                ["nyr", "nyi"]
+            ]
+        }
+    ]
 };
 
 var renderOptions = function (title, req) {
@@ -36,12 +50,20 @@ exports.predictions = function (req, res) {
         res.render('closed', renderOptions(i18n.t("nav.predictions"), req));
     } else {
         var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
-        options.closingIn = function() {
+        options.closingIn = function () {
             return roundRegistration.closingOn.fromNow();
         };
-        options.predictions = roundRegistration;
+        options.predictions = roundRegistration.predictions;
+        options.points = roundRegistration.roundPoints;
         res.render('predictions', options);
     }
+};
+
+exports.predictionsSubmit = function (req, res) {
+    console.log(req.body);
+    
+    var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
+    res.render('thankyou', options);
 };
 
 exports.results = function (req, res) {

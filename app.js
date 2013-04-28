@@ -5,7 +5,7 @@ var express = require('express')
     , i18n = require("i18next")
     , moment = require("moment");
 
-i18n.init({ lng: 'fr' });
+i18n.init({ lng: 'fr', fallbackLng: 'fr' });
 moment.lang('fr');
 
 var app = express();
@@ -35,6 +35,7 @@ i18n.registerAppHelper(app);
 
 app.get('/', routes.index);
 app.get('/predictions', routes.predictions);
+app.post('/predictions', routes.predictionsSubmit);
 app.get('/results/:round', routes.results);
 app.get('/standings', routes.standings);
 

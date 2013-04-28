@@ -2,8 +2,9 @@
     "app": {
         "name": "Misez sur la glace",
         "year": "Séries éliminatoires 2013",
-        "closing": "L'inscription pour la ronde actuelle se termine dans ",
+        "closing": "L'inscription pour la ronde actuelle se termine ",
         "closed": "L'inscription pour la ronde actuelle est maintenant terminé.",
+        "thankyou": "Merci d'avoir participé et bonne chance!",
         "comingsoon": "À venir...",
         "404": "Oups ..."
     },
@@ -17,11 +18,28 @@
             "3": "Finales d'association",
             "4": "Finale"
         }
-    }, 
+    },
+    "points": {
+        "rounds": {
+            "1": "<strong>Quarts de finale:<br/>1 Point</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>1 Point supplémentaire</strong> si le nombre de parties correspond.",
+            "2": "<strong>Demi-finales:<br/>2 Points</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>2 Points supplémentaire</strong> si le nombre de parties correspond.",
+            "3": "<strong>Finales d'association:<br/>3 Points</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>3 Points supplémentaire</strong> si le nombre de parties correspond.",
+            "4": "<strong>Finale:<br/>4 Points</strong> pour chaque bonne sélection d'équipe vainqueur et <strong>4 Points supplémentaire</strong> si le nombre de parties correspond."
+        },
+        "disclamer": "Une seule prévision par personne par ronde."
+    },
+    "registration": {
+        "info": "Enregistrement",
+        "name": "Nom",
+        "email": "Courriel"
+    },
     "mtl": "MTL",
     "bos": "BOS",
     "nyi": "NY I",
     "nyr": "NY R",
     "east": "Est",
-    "west": "Ouest"
+    "west": "Ouest",
+    "final": "Finale",
+    "in": "en ",
+    "games": " parties"
 }
