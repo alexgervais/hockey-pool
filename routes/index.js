@@ -1,5 +1,6 @@
 var i18n = require("i18next"),
-    moment = require('moment');
+    moment = require('moment'),
+    fs = require('fs');
 
 var navbar = [
     {key: "nav.predictions", location: "/predictions"},
@@ -22,16 +23,9 @@ var roundRegistration = {
     roundPoints: "points.rounds.1",
     predictions: [
         {
-            section: "east",
+            section: "final",
             confrontations: [
-                ["mtl", "bos"],
-                ["nyr", "nyi"]
-            ]},
-        {
-            section: "west",
-            confrontations: [
-                ["mtl", "bos"],
-                ["nyr", "nyi"]
+                ["mtl", "bos"]
             ]
         }
     ]
@@ -61,7 +55,16 @@ exports.predictions = function (req, res) {
 
 exports.predictionsSubmit = function (req, res) {
     console.log(req.body);
-    
+
+    var stream = fs.createWriteStream("predictions.txt", {'flags': 'a'});
+    stream.once('open', function (fd) {
+        stream.write(moment().format());
+        stream.write('\n');
+        stream.write(JSON.stringify(req.body));
+        stream.write('\n');
+        stream.end();
+    });
+
     var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
     res.render('thankyou', options);
 };
