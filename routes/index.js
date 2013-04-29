@@ -37,7 +37,6 @@ roundResults[0] = {
         ] }
     ]};
 
-/*
 var roundRegistration = {
     closingOn: moment("2013-04-30 20:00 -0400", "YYYY-MM-DD HH:mm ZZ"),
     round: "nav.rounds.1",
@@ -46,8 +45,8 @@ var roundRegistration = {
         {
             section: "east",
             confrontations: [
-                ["ott", "pit"],
-                ["nyi", "mtl"],
+                ["nyi", "pit"],
+                ["ott", "mtl"],
                 ["nyr", "wsh"],
                 ["tor", "bos"]
             ]
@@ -63,7 +62,6 @@ var roundRegistration = {
         }
     ]
 };
-*/
 
 var renderOptions = function (title, req) {
     return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') }
