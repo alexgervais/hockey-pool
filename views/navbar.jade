@@ -1,25 +1,25 @@
 div.navbar.navbar-static-top
-  div.navbar-inner
-    div.container
-      a(data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a(href='/').brand= t("app.name")
-      div.nav-collapse.collapse
-        ul.nav
-          li.divider-vertical
-          for navitem in navbar
-            if (navitem.sub)
-              li.dropdown
-                a.dropdown-toggle(href='#', data-target='#', data-toggle='dropdown') #{t(navitem.key)} 
-                  b.caret
-                ul.dropdown-menu
-                  for sub in navitem.sub
-                    li
-                      a(href='#{sub.location}') #{t(sub.key)}
-            else
-              - var isActiveClass = (navitem.location === route ? 'active' : '')
-              li(class = isActiveClass)
-                a(href='#{navitem.location}') #{t(navitem.key)}
+    div.navbar-inner
+        div.container
+            a(data-toggle='collapse', data-target='.nav-collapse').btn.btn-navbar
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a(href='/').brand= t("app.name")
+            div.nav-collapse.collapse
+                ul.nav
+                    li.divider-vertical
+                    for navitem in navbar
+                        if (navitem.sub)
+                            li.dropdown
+                                a.dropdown-toggle(href='#', data-target='#', data-toggle='dropdown') #{t(navitem.key)} 
+                                    b.caret
+                                ul.dropdown-menu
+                                    for sub in navitem.sub
+                                        li
+                                            a(href='#{sub.location}') #{t(sub.key)}
+                        else
+                            - var isActiveClass = (navitem.location === route ? 'active' : '')
+                            li(class = isActiveClass)
+                                a(href='#{navitem.location}') #{t(navitem.key)}
           
