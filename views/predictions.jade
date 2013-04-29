@@ -42,26 +42,6 @@ block content
             p= t('points.disclamer')
             button.btn.btn-primary(type='submit') #{t('nav.predictions')}
 
+    script(type='text/javascript', src='/js/views/predictions.js')
     script(type='text/javascript')
-        $('form').submit(function() {
-          var validate = true;
-          $('form input').each(function(){
-            var inputValue = $(this).val();
-            if($.trim(inputValue).length <= 0) {
-              validate = false;
-            }
-          });
-          $('form select').each(function(){
-            var selectValue = $(this).val();
-            if($.trim(selectValue).length <= 0) {
-              validate = false;
-            }
-          });
-          if ($("form input:radio").length / $("form input:radio:checked").length != 2) {
-            validate = false;
-          }
-          if (!validate) {
-            alert('#{t("formvalidation")}');
-            return false;
-          }
-        });
+        initView('#{t("formvalidation")}');
