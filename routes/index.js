@@ -1,76 +1,12 @@
 var i18n = require("i18next"),
     moment = require('moment'),
-    fs = require('fs');
-
-var navbar = [
-    {key: "nav.predictions", location: "/predictions"},
-    {key: "nav.results",
-        sub: [
-            {key: "nav.rounds.1", location: "/results/1"},
-            {key: "nav.rounds.2", location: "/results/2"},
-            {key: "nav.rounds.3", location: "/results/3"},
-            {key: "nav.rounds.4", location: "/results/4"},
-        ]},
-    {key: "nav.standings", location: "/standings"},
-];
+    fs = require('fs'),
+    navbar = require('./navbar'),
+    roundResults = require('../config/results'),
+    roundRegistration = require('../config/registration'),
+    standings = require('../config/standings');
 
 var rounds = [1, 2, 3, 4];
-var roundResults = [];
-roundResults[0] = {
-    roundPoints: "points.rounds.1",
-    pointScale: 1,
-    result: [
-        ["mtl", 4],
-       // [],
-       // ["tor", 5]
-    ],
-    participants: [
-        { name: "alex", selections: [
-            ["mtl", 4],
-            ["nyr", 4],
-            ["bos", 7]
-        ] },
-        { name: "julie", selections: [
-            ["mtl", 7],
-            ["nyr", 6],
-            ["tor", 5]
-        ] }
-    ]};
-
-/*
-var standings = {
-    participants: [
-        { name: "alex", points: [0] },
-        { name: "julie", points: [0] }
-    ]
-};
-*/
-
-var roundRegistration = {
-    closingOn: moment("2013-04-30 20:00 -0400", "YYYY-MM-DD HH:mm ZZ"),
-    round: "nav.rounds.1",
-    roundPoints: "points.rounds.1",
-    predictions: [
-        {
-            section: "east",
-            confrontations: [
-                ["nyi", "pit"],
-                ["ott", "mtl"],
-                ["nyr", "wsh"],
-                ["tor", "bos"]
-            ]
-        },
-        {
-            section: "west",
-            confrontations: [
-                ["min", "chi"],
-                ["det", "ana"],
-                ["sjs", "van"],
-                ["lak", "stl"]
-            ]
-        }
-    ]
-};
 
 var renderOptions = function (title, req) {
     return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') }
@@ -133,7 +69,7 @@ exports.results = function (req, res) {
 exports.standings = function (req, res) {
 
     var options = renderOptions(i18n.t("nav.standings"), req);
-    if (typeof standings != 'undefined') {
+    if (typeof standings != 'undefined' && standings.participants) {
         options.standings = standings;
         res.render('standings', options);
     } else {
