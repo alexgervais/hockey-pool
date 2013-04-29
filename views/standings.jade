@@ -1,5 +1,35 @@
 extends layout
 
-block content
-  h3= title
-  p #{t("app.comingsoon")}
+block content       
+    h3= title
+
+    table.table.table-hover.table-condensed
+        thead
+            tr
+                th(rowspan=2)= t('results.name')
+                th(colspan=4)= t('results.round')
+                th(rowspan=2)= t('results.total')
+            tr
+                th 1
+                th 2
+                th 3
+                th 4
+        tbody
+            for participant in standings.participants
+                - var points = 0
+                tr
+                    td
+                        strong= participant.name
+                    td #{participant.points[0]}
+                        if (participant.points[0])
+                            - points += participant.points[0]
+                    td #{participant.points[1]}
+                        if (participant.points[1])
+                            - points += participant.points[1]
+                    td #{participant.points[2]}
+                        if (participant.points[2])
+                            - points += participant.points[2]
+                    td #{participant.points[3]}
+                        if (participant.points[3])
+                            - points += participant.points[3]
+                    td= points

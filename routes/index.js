@@ -37,6 +37,15 @@ roundResults[0] = {
         ] }
     ]};
 
+/*
+var standings = {
+    participants: [
+        { name: "alex", points: [0] },
+        { name: "julie", points: [0] }
+    ]
+};
+*/
+
 var roundRegistration = {
     closingOn: moment("2013-04-30 20:00 -0400", "YYYY-MM-DD HH:mm ZZ"),
     round: "nav.rounds.1",
@@ -122,7 +131,14 @@ exports.results = function (req, res) {
 };
 
 exports.standings = function (req, res) {
-    res.render('standings', renderOptions(i18n.t("nav.standings"), req));
+
+    var options = renderOptions(i18n.t("nav.standings"), req);
+    if (typeof standings != 'undefined') {
+        options.standings = standings;
+        res.render('standings', options);
+    } else {
+        res.render('comingsoon', options);
+    }
 };
 
 exports.notFound = function (req, res) {
