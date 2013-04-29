@@ -1,5 +1,5 @@
 var roundResults = [];
-roundResults[1] = {
+roundResults[0] = {
     roundPoints: "points.rounds.1",
     pointScale: 1,
     result: [
