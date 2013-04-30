@@ -30,7 +30,8 @@ block content
                 for selection, i in participant.selections
                     - var points = 0
                     - var hasRightTeam = false
-                    tr
+                    - var style = (i == 0) ? 'border-top:2px solid; border-color: inherit;' : ''
+                    tr(style=style)
                         if (i == 0)
                             td(rowspan=participant.selections.length)
                                 strong= participant.name
