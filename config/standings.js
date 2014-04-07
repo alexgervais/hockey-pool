@@ -1,5 +1,5 @@
 module.exports = {
-    participants: [
+    /* participants: [
         { name: "Richard", points: [] },
         { name: "André", points: [] },
         { name: "Johanne", points: [] },
@@ -11,5 +11,5 @@ module.exports = {
         { name: "Amélie", points: [] },
         { name: "Éliane", points: [] },
         { name: "Martin", points: [] }
-    ]
+    ] */
 };

@@ -7,19 +7,19 @@ div.navbar.navbar-static-top
                 span.icon-bar
             a(href='/').brand= t("app.name")
             div.nav-collapse.collapse
-                ul.nav
-                    li.divider-vertical
-                    for navitem in navbar
-                        if (navitem.sub)
-                            li.dropdown
-                                a.dropdown-toggle(href='#', data-target='#', data-toggle='dropdown') #{t(navitem.key)} 
-                                    b.caret
-                                ul.dropdown-menu
-                                    for sub in navitem.sub
-                                        li
-                                            a(href='#{sub.location}') #{t(sub.key)}
-                        else
-                            - var isActiveClass = (navitem.location === route ? 'active' : '')
-                            li(class = isActiveClass)
-                                a(href='#{navitem.location}') #{t(navitem.key)}
-          
+                for navdirection in navbar
+                    ul.nav(class = '#{navdirection.direction}')
+                        li.divider-vertical
+                        for navitem in navdirection.navitems
+                            if (navitem.sub)
+                                li.dropdown
+                                    a.dropdown-toggle(href='#', data-target='#', data-toggle='dropdown') #{t(navitem.key)}
+                                        b.caret
+                                    ul.dropdown-menu
+                                        for sub in navitem.sub
+                                            li
+                                                a(href='#{sub.location}') #{t(sub.key)}
+                            else
+                                - var isActiveClass = (navitem.location === route ? 'active' : '')
+                                li(class = isActiveClass)
+                                    a(href='#{navitem.location}') #{t(navitem.key)}

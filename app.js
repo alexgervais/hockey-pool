@@ -38,6 +38,8 @@ app.get('/predictions', routes.predictions);
 app.post('/predictions', routes.predictionsSubmit);
 app.get('/results/:round', routes.results);
 app.get('/standings', routes.standings);
+app.get('/:year/results/:round', routes.results);
+app.get('/:year/standings', routes.standings);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

@@ -6,21 +6,31 @@ module.exports = {
     roundPoints: "points.rounds.1",
     predictions: [
         {
-            section: "east",
+            section: "atlantic",
             confrontations: [
-                ["nyi", "pit"],
-                ["ott", "mtl"],
-                ["nyr", "wsh"],
-                ["tor", "bos"]
+                ["cbj", "bos"],
+                ["tbl", "mtl"]
             ]
         },
         {
-            section: "west",
+            section: "metropolitan",
             confrontations: [
-                ["min", "chi"],
-                ["det", "ana"],
-                ["sjs", "van"],
-                ["lak", "stl"]
+                ["det", "pit"],
+                ["phi", "nyr"]
+            ]
+        },
+        {
+            section: "central",
+            confrontations: [
+                ["dal", "stl"],
+                ["chi", "col"]
+            ]
+        },
+        {
+            section: "pacific",
+            confrontations: [
+                ["min", "ana"],
+                ["lak", "sjs"]
             ]
         }
     ]

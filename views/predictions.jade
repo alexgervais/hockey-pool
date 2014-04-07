@@ -2,7 +2,7 @@ extends layout
 
 block content
     h3= title
-    div.alert.alert-block #{t("app.closing")} 
+    div.alert.alert-block #{t("app.closing")}
         strong #{closingIn()}
     form.form-horizontal(method='post')
         for prediction in predictions
@@ -39,6 +39,7 @@ block content
                 input.input-xlarge#email(type='text', name='email')
         div.form-actions
             p!= t(points)
+            p= t('points.equality')
             p= t('points.disclamer')
             button.btn.btn-primary(type='submit') #{t('nav.predictions')}
 

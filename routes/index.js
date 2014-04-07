@@ -2,9 +2,7 @@ var i18n = require("i18next"),
     moment = require('moment'),
     fs = require('fs'),
     navbar = require('./navbar'),
-    roundResults = require('../config/results'),
-    roundRegistration = require('../config/registration'),
-    standings = require('../config/standings');
+    roundRegistration = require('../config/registration');
 
 var rounds = [1, 2, 3, 4];
 
@@ -51,11 +49,18 @@ exports.predictionsSubmit = function (req, res) {
 exports.results = function (req, res) {
     var roundNo = parseInt(req.params.round);
 
+    var year = parseInt(req.params.year) || '';
+    try {
+        var roundResults = require('../' + year + '/config/results');
+    } catch (ignored) {
+
+    }
+
     if (rounds.indexOf(roundNo) > -1) {
-        var title = i18n.t("nav.results") + ' - ' + i18n.t("nav.rounds." + roundNo);
+        var title = i18n.t("nav.results") + ' - ' + i18n.t("nav.rounds." + roundNo) + ' ' + year;
 
         var options = renderOptions(title, req);
-        if (typeof roundResults[roundNo] != 'undefined') {
+        if (roundResults && typeof roundResults[roundNo] != 'undefined') {
             options.roundResults = roundResults[roundNo];
             res.render('results', options);
         } else {
@@ -68,8 +73,15 @@ exports.results = function (req, res) {
 
 exports.standings = function (req, res) {
 
-    var options = renderOptions(i18n.t("nav.standings"), req);
-    if (typeof standings != 'undefined' && standings.participants) {
+    var year = parseInt(req.params.year) || '';
+    try {
+        var standings = require('../' + year + '/config/standings');
+    } catch (ignored) {
+
+    }
+
+    var options = renderOptions(i18n.t("nav.standings") + ' ' + year, req);
+    if (standings && typeof standings != 'undefined' && standings.participants) {
         options.standings = standings;
         res.render('standings', options);
     } else {
