@@ -51,7 +51,7 @@ exports.results = function (req, res) {
 
     var year = parseInt(req.params.year) || '';
     try {
-        var roundResults = require('../' + year + '/config/results');
+        var roundResults = require('../config/' + year + '/results');
     } catch (ignored) {
 
     }
@@ -75,7 +75,7 @@ exports.standings = function (req, res) {
 
     var year = parseInt(req.params.year) || '';
     try {
-        var standings = require('../' + year + '/config/standings');
+        var standings = require('../config/' + year + '/standings');
     } catch (ignored) {
 
     }
