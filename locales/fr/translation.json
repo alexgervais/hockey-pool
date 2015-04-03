@@ -1,7 +1,7 @@
 {
     "app": {
         "name": "Misez sur la glace",
-        "year": "Séries éliminatoires 2014",
+        "year": "Séries éliminatoires 2015",
         "closing": "L'inscription pour la ronde actuelle se termine ",
         "closed": "L'inscription pour la ronde actuelle est maintenant terminée.",
         "thankyou": "Merci d'avoir participé et bonne chance!",
@@ -66,6 +66,10 @@
     "ott": "Sénateurs d'Ottawa",
     "nyi": "Islanders de New York",
     "van": "Canucks de Vancouver",
+    "nsh": "Predators de Nashville",
+    "wpg": "Jets de Winnipeg",
+    "cgy": "Flames de Calgary",
+    "cgy": "Panthers de la Florida",
     "east": "Est",
     "atlantic": "Atlantique",
     "metropolitan": "Métropolitaine",
