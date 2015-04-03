@@ -1,6 +1,16 @@
 {
+    "author": "alexgervais <alex.gervais@gmail.com> (http://alexgervais.github.io)",
     "name": "hockey-pool",
-    "version": "0.0.1",
+    "description": "Hockey Pool",
+    "version": "1.0-2015",
+    "homepage": "https://github.com/alexgervais/hockey-pool",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexgervais/hockey-pool.git"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
     "private": true,
     "scripts": {
         "start": "node pool.js"
