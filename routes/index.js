@@ -20,7 +20,7 @@ exports.index = function (req, res) {
 
 exports.predictions = function (req, res) {
 
-    if (roundRegistration === undefined) {
+    if (!roundRegistration) {
         res.render('comingsoon', renderOptions(i18n.t('nav.predictions'), req));
     } else if (moment().isAfter(roundRegistration.closingOn)) {
         res.render('closed', renderOptions(i18n.t('nav.predictions'), req));
@@ -65,7 +65,7 @@ exports.results = function (req, res) {
         var title = i18n.t('nav.results') + ' - ' + i18n.t('nav.rounds.' + roundNo) + ' ' + year;
 
         var options = renderOptions(title, req);
-        if (roundResults && typeof roundResults[roundNo] !== undefined) {
+        if (roundResults && roundResults[roundNo]) {
             options.roundResults = roundResults[roundNo];
             res.render('results', options);
         } else {
@@ -88,7 +88,7 @@ exports.standings = function (req, res) {
     }
 
     var options = renderOptions(i18n.t('nav.standings') + ' ' + year, req);
-    if (standings && typeof standings !== undefined && standings.participants) {
+    if (standings && standings.participants) {
         options.standings = standings;
         res.render('standings', options);
     } else {
