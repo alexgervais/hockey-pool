@@ -1,26 +1,31 @@
-var i18n = require("i18next"),
-    moment = require('moment'),
-    fs = require('fs'),
-    navbar = require('./navbar'),
-    roundRegistration = require('../config/registration');
+'use strict';
+
+var i18n = require('i18next');
+var moment = require('moment');
+var fs = require('fs');
+var navbar = require('./navbar');
+var roundRegistration = require('../config/registration');
 
 var rounds = [1, 2, 3, 4];
 
 var renderOptions = function (title, req) {
-    return { title: title, navbar: navbar, route: (req.route ? req.route.path : '') }
+
+    return {title: title, navbar: navbar, route: (req.route ? req.route.path : '')};
 };
 
 exports.index = function (req, res) {
-    res.render('index', renderOptions(i18n.t("app.name"), req));
+
+    res.render('index', renderOptions(i18n.t('app.name'), req));
 };
 
 exports.predictions = function (req, res) {
-    if (typeof roundRegistration == 'undefined') {
-        res.render('comingsoon', renderOptions(i18n.t("nav.predictions"), req));
+
+    if (roundRegistration === undefined) {
+        res.render('comingsoon', renderOptions(i18n.t('nav.predictions'), req));
     } else if (moment().isAfter(roundRegistration.closingOn)) {
-        res.render('closed', renderOptions(i18n.t("nav.predictions"), req));
+        res.render('closed', renderOptions(i18n.t('nav.predictions'), req));
     } else {
-        var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
+        var options = renderOptions(i18n.t('nav.predictions') + ' - ' + i18n.t(roundRegistration.round), req);
         options.closingIn = function () {
             return roundRegistration.closingOn.fromNow();
         };
@@ -31,10 +36,9 @@ exports.predictions = function (req, res) {
 };
 
 exports.predictionsSubmit = function (req, res) {
-    console.log(req.body);
 
-    var stream = fs.createWriteStream("predictions.txt", {'flags': 'a'});
-    stream.once('open', function (fd) {
+    var stream = fs.createWriteStream('predictions.txt', {'flags': 'a'});
+    stream.once('open', function () {
         stream.write(moment().format());
         stream.write('\n');
         stream.write(JSON.stringify(req.body));
@@ -42,46 +46,49 @@ exports.predictionsSubmit = function (req, res) {
         stream.end();
     });
 
-    var options = renderOptions(i18n.t("nav.predictions") + ' - ' + i18n.t(roundRegistration.round), req);
+    var options = renderOptions(i18n.t('nav.predictions') + ' - ' + i18n.t(roundRegistration.round), req);
     res.render('thankyou', options);
 };
 
 exports.results = function (req, res) {
+
     var roundNo = parseInt(req.params.round);
-
     var year = parseInt(req.params.year) || '';
-    try {
-        var roundResults = require('../config/' + year + '/results');
-    } catch (ignored) {
 
+    var roundResults;
+    try {
+        roundResults = require('../config/' + year + '/results');
+    } catch (ignored) {
     }
 
     if (rounds.indexOf(roundNo) > -1) {
-        var title = i18n.t("nav.results") + ' - ' + i18n.t("nav.rounds." + roundNo) + ' ' + year;
+        var title = i18n.t('nav.results') + ' - ' + i18n.t('nav.rounds.' + roundNo) + ' ' + year;
 
         var options = renderOptions(title, req);
-        if (roundResults && typeof roundResults[roundNo] != 'undefined') {
+        if (roundResults && typeof roundResults[roundNo] !== undefined) {
             options.roundResults = roundResults[roundNo];
             res.render('results', options);
         } else {
             res.render('comingsoon', options);
         }
     } else {
-        res.render('404', renderOptions(i18n.t("nav.results"), req));
+        res.render('404', renderOptions(i18n.t('nav.results'), req));
     }
 };
 
 exports.standings = function (req, res) {
 
     var year = parseInt(req.params.year) || '';
+
+    var standings;
     try {
-        var standings = require('../config/' + year + '/standings');
+        standings = require('../config/' + year + '/standings');
     } catch (ignored) {
 
     }
 
-    var options = renderOptions(i18n.t("nav.standings") + ' ' + year, req);
-    if (standings && typeof standings != 'undefined' && standings.participants) {
+    var options = renderOptions(i18n.t('nav.standings') + ' ' + year, req);
+    if (standings && typeof standings !== undefined && standings.participants) {
         options.standings = standings;
         res.render('standings', options);
     } else {
@@ -90,5 +97,6 @@ exports.standings = function (req, res) {
 };
 
 exports.notFound = function (req, res) {
-    res.render('404', renderOptions("404", req));
+
+    res.render('404', renderOptions('404', req));
 };

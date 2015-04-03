@@ -1,11 +1,13 @@
-var express = require('express')
-    , routes = require('./routes')
-    , http = require('http')
-    , path = require('path')
-    , i18n = require("i18next")
-    , moment = require("moment");
+'use strict';
 
-i18n.init({ lng: 'fr', fallbackLng: 'fr' });
+var express = require('express');
+var routes = require('./routes');
+var http = require('http');
+var path = require('path');
+var i18n = require('i18next');
+var moment = require('moment');
+
+i18n.init({lng: 'fr', fallbackLng: 'fr'});
 moment.lang('fr');
 
 var app = express();
@@ -23,11 +25,11 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('a not-so-secret secret key'));
 app.use(express.session());
 app.use(app.router);
-app.use(require('less-middleware')({ src: __dirname + '/public' }));
+app.use(require('less-middleware')({src: __dirname + '/public'}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
-if ('development' == app.get('env')) {
+if ('development' === app.get('env')) {
     app.use(express.errorHandler());
 }
 
