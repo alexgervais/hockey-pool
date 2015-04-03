@@ -1,1 +1,3 @@
-More to come...
+# Pool des séries éliminatoires
+
+misezsurlaglace.com
