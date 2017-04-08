@@ -10,29 +10,29 @@ module.exports = {
         {
             section: 'atlantic',
             confrontations: [
-                ['cbj', 'bos'],
-                ['tbl', 'mtl']
+                ['nyr', 'mtl'],
+                ['bos', 'ott']
             ]
         },
         {
             section: 'metropolitan',
             confrontations: [
-                ['det', 'pit'],
-                ['phi', 'nyr']
+                ['tor', 'wsh'],
+                ['cbj', 'pit']
             ]
         },
         {
             section: 'central',
             confrontations: [
-                ['dal', 'stl'],
-                ['chi', 'col']
+                ['nsh', 'chi'],
+                ['stl', 'min']
             ]
         },
         {
             section: 'pacific',
             confrontations: [
-                ['min', 'ana'],
-                ['lak', 'sjs']
+                ['cgy', 'ana'],
+                ['sjs', 'edm']
             ]
         }
     ]

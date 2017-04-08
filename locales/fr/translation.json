@@ -1,7 +1,7 @@
 {
     "app": {
         "name": "Misez sur la glace",
-        "year": "Séries éliminatoires 2016",
+        "year": "Séries éliminatoires 2017",
         "closing": "L'inscription pour la ronde actuelle se termine ",
         "closed": "L'inscription pour la ronde actuelle est maintenant terminée.",
         "thankyou": "Merci d'avoir participé et bonne chance!",
@@ -70,6 +70,7 @@
     "wpg": "Jets de Winnipeg",
     "cgy": "Flames de Calgary",
     "fla": "Panthers de la Florida",
+    "edm": "Oilers de Edmonton",
     "east": "Est",
     "atlantic": "Atlantique",
     "metropolitan": "Métropolitaine",
