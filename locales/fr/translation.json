@@ -1,7 +1,7 @@
 {
     "app": {
         "name": "Misez sur la glace",
-        "year": "Séries éliminatoires 2017",
+        "year": "Séries éliminatoires 2018",
         "closing": "L'inscription pour la ronde actuelle se termine ",
         "closed": "L'inscription pour la ronde actuelle est maintenant terminée.",
         "thankyou": "Merci d'avoir participé et bonne chance!",
@@ -71,6 +71,8 @@
     "cgy": "Flames de Calgary",
     "fla": "Panthers de la Florida",
     "edm": "Oilers de Edmonton",
+    "njd": "Devils du New Jersey",
+    "vgk": "Golden Knights de Las Vegas",
     "east": "Est",
     "atlantic": "Atlantique",
     "metropolitan": "Métropolitaine",
