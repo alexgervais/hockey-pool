@@ -1,7 +1,7 @@
 {
     "app": {
         "name": "Misez sur la glace",
-        "year": "Séries éliminatoires 2018",
+        "year": "Séries éliminatoires 2019",
         "closing": "L'inscription pour la ronde actuelle se termine ",
         "closed": "L'inscription pour la ronde actuelle est maintenant terminée.",
         "thankyou": "Merci d'avoir participé et bonne chance!",
@@ -73,6 +73,7 @@
     "edm": "Oilers de Edmonton",
     "njd": "Devils du New Jersey",
     "vgk": "Golden Knights de Las Vegas",
+    "car": "Hurricanes de la Caroline",
     "east": "Est",
     "atlantic": "Atlantique",
     "metropolitan": "Métropolitaine",
