@@ -3,36 +3,26 @@
 var moment = require('moment');
 
 module.exports = {
-    closingOn: moment('2018-04-10 19:00 -0400', 'YYYY-MM-DD HH:mm ZZ'),
+    closingOn: moment('2018-08-11 15:00 -0400', 'YYYY-MM-DD HH:mm ZZ'),
     round: 'nav.rounds.1',
     roundPoints: 'points.rounds.1',
     predictions: [
         {
-            section: 'atlantic',
+            section: 'east',
             confrontations: [
-                ['tbl', 'cbj'],
-                ['bos', 'tor']
+                ['phi', 'mtl'],
+                ['tbl', 'col'],
+                ['wsh', 'nyi'],
+                ['bos', 'car']
             ]
         },
         {
-            section: 'metropolitan',
+            section: 'west',
             confrontations: [
-                ['wsh', 'car'],
-                ['nyi', 'pit']
-            ]
-        },
-        {
-            section: 'central',
-            confrontations: [
-                ['stl', 'dal'],
-                ['nsh', 'wpg']
-            ]
-        },
-        {
-            section: 'pacific',
-            confrontations: [
-                ['cgy', 'col'],
-                ['sjs', 'vgk']
+                ['vgk', 'chi'],
+                ['col', 'ari'],
+                ['dal', 'cgy'],
+                ['stl', 'van']
             ]
         }
     ]
