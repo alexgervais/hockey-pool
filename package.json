@@ -20,6 +20,6 @@
         "jade": "0.30.0",
         "less-middleware": "0.1.12",
         "i18next": "1.6.4",
-        "moment": "2.0.0"
+        "moment": "2.27.0"
     }
 }
