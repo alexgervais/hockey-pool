@@ -1,7 +1,7 @@
 {
     "app": {
         "name": "Misez sur la glace",
-        "year": "Séries éliminatoires 2020",
+        "year": "Séries éliminatoires 2021",
         "closing": "L'inscription pour la ronde actuelle se termine ",
         "closed": "L'inscription pour la ronde actuelle est maintenant terminée.",
         "thankyou": "Merci d'avoir participé et bonne chance!",
@@ -75,6 +75,7 @@
     "vgk": "Golden Knights de Las Vegas",
     "car": "Hurricanes de la Caroline",
     "ari": "Coyotes de l'Arizona",
+    "north": "Nord",
     "east": "Est",
     "atlantic": "Atlantique",
     "metropolitan": "Métropolitaine",
