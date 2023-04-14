@@ -13,7 +13,7 @@ moment.lang('fr');
 var app = express();
 
 // all environments
-app.set('port', 8080);
+app.set('port', process.env.PORT || 8080);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use('i18n', i18n);
@@ -48,3 +48,8 @@ http.createServer(app).listen(app.get('port'), function () {
 });
 
 app.use(routes.notFound);
+
+process.on('SIGINT', function () {
+    console.log('Caught interrupt signal');
+    process.exit();
+});
