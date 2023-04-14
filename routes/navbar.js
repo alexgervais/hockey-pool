@@ -12,6 +12,15 @@ module.exports = [
         {key: 'nav.standings', location: '/standings'}
     ]},
     {direction: 'pull-right', navitems: [
+        {key: '2022', class: 'navbar-right', sub: [
+            {key: 'nav.rounds.1', location: '/2022/results/1'},
+            {key: 'nav.rounds.2', location: '/2022/results/2'},
+            {key: 'nav.rounds.3', location: '/2022/results/3'},
+            {key: 'nav.rounds.4', location: '/2022/results/4'},
+            {key: 'nav.standings', location: '/2022/standings'}
+        ]}
+    ]},
+    {direction: 'pull-right', navitems: [
         {key: '2021', class: 'navbar-right', sub: [
             {key: 'nav.rounds.1', location: '/2021/results/1'},
             {key: 'nav.rounds.2', location: '/2021/results/2'},
