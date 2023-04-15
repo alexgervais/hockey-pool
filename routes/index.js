@@ -2,9 +2,10 @@
 
 var i18n = require('i18next');
 var moment = require('moment');
-var fs = require('fs');
 var navbar = require('./navbar');
 var roundRegistration = require('../config/registration');
+const {Storage} = require('@google-cloud/storage');
+const stream = require('stream');
 
 var rounds = [1, 2, 3, 4];
 
@@ -37,14 +38,21 @@ exports.predictions = function (req, res) {
 
 exports.predictionsSubmit = function (req, res) {
 
-    var stream = fs.createWriteStream('predictions.txt', {'flags': 'a'});
-    stream.once('open', function () {
-        stream.write(moment().format());
-        stream.write('\n');
-        stream.write(JSON.stringify(req.body));
-        stream.write('\n');
-        stream.end();
-    });
+    const storage = new Storage();
+    const bucket = storage.bucket('misezsurlaglace-predictions');
+    const file = bucket.file(`prediction-${moment().format()}`);
+
+    const passthroughStream = new stream.PassThrough();
+    passthroughStream.write(JSON.stringify(req.body));
+    passthroughStream.end();
+
+    async function streamFileUpload() {
+        passthroughStream.pipe(file.createWriteStream()).on('finish', () => {
+            // The file upload is complete
+        });
+    }
+
+    streamFileUpload().catch(console.error);
 
     var options = renderOptions(i18n.t('nav.predictions') + ' - ' + i18n.t(roundRegistration.round), req);
     res.render('thankyou', options);
