@@ -8,13 +8,6 @@ module.exports = {
     roundPoints: 'points.rounds.1',
     predictions: [
         {
-            section: 'metropolitan',
-            confrontations: [
-                ['car', 'nyi'],
-                ['njd', 'nyr']
-            ]
-        },
-        {
             section: 'atlantic',
             confrontations: [
                 ['bos', 'fla'],
@@ -22,10 +15,17 @@ module.exports = {
             ]
         },
         {
+            section: 'metropolitan',
+            confrontations: [
+                ['car', 'nyi'],
+                ['njd', 'nyr']
+            ]
+        },
+        {
             section: 'central',
             confrontations: [
-                ['dal', 'sea'],
-                ['col', 'min']
+                ['col', 'sea'],
+                ['dal', 'min']
             ]
         },
         {
