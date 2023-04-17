@@ -75,6 +75,11 @@ exports.results = function (req, res) {
         var options = renderOptions(title, req);
         if (roundResults && roundResults[roundNo]) {
             options.roundResults = roundResults[roundNo];
+            options.roundResults.participants.sort((a, b) => {
+                const nameA = a.name.toUpperCase();
+                const nameB = b.name.toUpperCase();
+                return nameA.localeCompare(nameB);
+            });
             res.render('results', options);
         } else {
             res.render('comingsoon', options);
@@ -98,6 +103,11 @@ exports.standings = function (req, res) {
     var options = renderOptions(i18n.t('nav.standings') + ' ' + year, req);
     if (standings && standings.participants) {
         options.standings = standings;
+        options.standings.participants.sort((a, b) => {
+            const pointsA = a.points.reduce((a, b) => a + b, 0);
+            const pointsB = b.points.reduce((a, b) => a + b, 0);
+            return pointsB - pointsA;
+        });
         res.render('standings', options);
     } else {
         res.render('comingsoon', options);
