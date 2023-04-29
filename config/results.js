@@ -4,7 +4,16 @@ var roundResults = [];
 roundResults[1] = {
     roundPoints: 'points.rounds.1',
     pointScale: 1,
-    result: [],
+    result: [
+        [],
+        [],
+        ['car', 6],
+        [],
+        [],
+        ['dal', 6],
+        ['vgk', 5],
+        []
+    ],
     participants: [
         {
             name: 'Alex', selections: [
