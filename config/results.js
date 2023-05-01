@@ -5,14 +5,14 @@ roundResults[1] = {
     roundPoints: 'points.rounds.1',
     pointScale: 1,
     result: [
-        [],
-        [],
+        ['fla', 7],
+        ['tor', 6],
         ['car', 6],
         [],
-        [],
+        ['sea', 7],
         ['dal', 6],
         ['vgk', 5],
-        []
+        ['edm', 6]
     ],
     participants: [
         {
