@@ -8,7 +8,7 @@ roundResults[1] = {
         ['fla', 7],
         ['tor', 6],
         ['car', 6],
-        [],
+        ['njd', 7],
         ['sea', 7],
         ['dal', 6],
         ['vgk', 5],
