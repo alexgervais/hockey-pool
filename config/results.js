@@ -1,6 +1,112 @@
 'use strict';
 
 var roundResults = [];
+
+roundResults[2] = {
+    roundPoints: 'points.rounds.2',
+    pointScale: 2,
+    result: [
+    ],
+    participants: [
+        {
+            name: 'Alex', selections: [
+                ['fla', 7],
+                ['car', 6],
+                ['sea', 5],
+                ['vgk', 7]
+            ]
+        },
+        {
+            name: 'André', selections: [
+                ['fla', 6],
+                ['njd', 6],
+                ['sea', 6],
+                ['vgk', 5]
+            ]
+        },
+        {
+            name: 'Mom', selections: [
+                ['tor', 6],
+                ['njd', 6],
+                ['dal', 5],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Antoine', selections: [
+                ['tor', 5],
+                ['car', 6],
+                ['dal', 6],
+                ['edm', 7]
+            ]
+        },
+        {
+            name: 'Richard', selections: [
+                ['tor', 6],
+                ['car', 6],
+                ['dal', 6],
+                ['edm', 7]
+            ]
+        },
+        {
+            name: 'Martin', selections: [
+                ['tor', 6],
+                ['car', 5],
+                ['dal', 5],
+                ['edm', 6]
+            ]
+        },
+        {
+            name: 'Eliane', selections: [
+                ['fla', 5],
+                ['njd', 6],
+                ['sea', 5],
+                ['edm', 6]
+            ]
+        },
+        {
+            name: 'Ophélia', selections: [
+                ['fla', 7],
+                ['car', 5],
+                ['sea', 6],
+                ['vgk', 4]
+            ]
+        },
+        {
+            name: 'Quentin', selections: [
+                ['tor', 6],
+                ['njd', 4],
+                ['dal', 7],
+                ['edm', 5]
+            ]
+        },
+        {
+            name: 'Alex G-P', selections: [
+                ['fla', 6],
+                ['car', 5],
+                ['dal', 7],
+                ['edm', 6]
+            ]
+        },
+        {
+            name: 'Marie-Christine', selections: [
+                ['fla', 7],
+                ['car', 7],
+                ['sea', 7],
+                ['vgk', 7]
+            ]
+        },
+        {
+            name: 'Johanne', selections: [
+                ['tor', 6],
+                ['car', 7],
+                ['sea', 7],
+                ['edm', 7]
+            ]
+        }
+    ]
+};
+
 roundResults[1] = {
     roundPoints: 'points.rounds.1',
     pointScale: 1,
