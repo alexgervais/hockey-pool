@@ -8,7 +8,7 @@ roundResults[2] = {
     result: [
         ['fla', 5],
         ['car', 5],
-        [],
+        ['dal', 7],
         ['vgk', 6]
     ],
     participants: [
