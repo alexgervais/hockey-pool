@@ -2,6 +2,89 @@
 
 var roundResults = [];
 
+roundResults[3] = {
+    roundPoints: 'points.rounds.3',
+    pointScale: 3,
+    result: [
+        [],
+        []
+    ],
+    participants: [
+        {
+            name: 'Alex', selections: [
+                ['fla', 5],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'André', selections: [
+                ['fla', 7],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Mom', selections: [
+                ['car', 6],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Antoine', selections: [
+                ['car', 6],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Richard', selections: [
+                ['car', 7],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Martin', selections: [
+                ['car', 6],
+                ['dal', 7]
+            ]
+        },
+        {
+            name: 'Eliane', selections: [
+                ['fla', 6],
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Ophélia', selections: [
+                ['car', 5],
+                ['dal', 4]
+            ]
+        },
+        {
+            name: 'Quentin', selections: [
+                ['car', 7],
+                ['dal', 7]
+            ]
+        },
+        {
+            name: 'Alex G-P', selections: [
+                ['fla', 5],
+                ['dal', 6]
+            ]
+        },
+        {
+            name: 'Marie-Christine', selections: [
+                ['fla', 7],
+                ['dal', 7]
+            ]
+        },
+        {
+            name: 'Johanne', selections: [
+                ['car', 6],
+                ['dal', 7]
+            ]
+        }
+    ]
+};
+
 roundResults[2] = {
     roundPoints: 'points.rounds.2',
     pointScale: 2,
