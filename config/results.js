@@ -2,6 +2,76 @@
 
 var roundResults = [];
 
+roundResults[4] = {
+    roundPoints: 'points.rounds.4',
+    pointScale: 4,
+    result: [
+        []
+    ],
+    participants: [
+        {
+            name: 'Alex', selections: [
+                ['vgk', 5]
+            ]
+        },
+        {
+            name: 'André', selections: [
+                ['fla', 6]
+            ]
+        },
+        {
+            name: 'Mom', selections: [
+                ['vgk', 6]
+            ]
+        },
+        {
+            name: 'Antoine', selections: [
+                ['fla', 5]
+            ]
+        },
+        {
+            name: 'Richard', selections: [
+                ['vgk', 5]
+            ]
+        },
+        {
+            name: 'Martin', selections: [
+                ['fla', 4]
+            ]
+        },
+        {
+            name: 'Eliane', selections: [
+                ['vgk', 5]
+            ]
+        },
+        {
+            name: 'Ophélia', selections: [
+                ['fla', 6]
+            ]
+        },
+        {
+            name: 'Quentin', selections: [
+                ['fla', 7]
+            ]
+        },
+        {
+            name: 'Alex G-P', selections: [
+                ['fla', 6]
+            ]
+        },
+        {
+            name: 'Marie-Christine', selections: [
+                ['fla', 7]
+            ]
+        },
+        {
+            name: 'Johanne', selections: [
+                ['vgk', 5]
+            ]
+        }
+    ]
+};
+
 roundResults[3] = {
     roundPoints: 'points.rounds.3',
     pointScale: 3,
