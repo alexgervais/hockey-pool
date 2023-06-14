@@ -6,7 +6,7 @@ roundResults[4] = {
     roundPoints: 'points.rounds.4',
     pointScale: 4,
     result: [
-        []
+        ['vgk', 5]
     ],
     participants: [
         {
