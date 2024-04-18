@@ -25,7 +25,9 @@ jobs:
           registry: ${{ env.IMAGE_REGISTRY }}
 
       - name: Build and push
-        run: TAG=${{ env.GITHUB_SHA }} make push
+        env:
+          TAG: ${{ github.sha }}
+        run: make push
 
       - name: Log in to Google Cloud
         uses: google-github-actions/auth@v2
