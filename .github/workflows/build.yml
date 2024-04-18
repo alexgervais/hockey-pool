@@ -38,7 +38,7 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: 'a'
-          image: ${{ env.IMAGE_REGISTRY }}/${{ env.REGISTRY_USER }}/hockey-pool:${{ env.GITHUB_SHA }}
+          image: ${{ env.IMAGE_REGISTRY }}/${{ env.REGISTRY_USER }}/hockey-pool:${{ github.sha }}
 
       - name: Deploy result
         run: curl "${{ steps.deploy.outputs.url }}"
