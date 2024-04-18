@@ -1,4 +1,5 @@
-TAG = $(shell date +%Y%m%d%H%M%S)
+REV=$(shell git rev-parse --short HEAD)
+TAG ?= $(REV)
 
 .PHONY: build
 build:

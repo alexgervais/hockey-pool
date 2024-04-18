@@ -25,4 +25,18 @@ jobs:
           registry: ${{ env.IMAGE_REGISTRY }}
 
       - name: Build and push
-        run: make push
+        run: TAG=${{ env.GITHUB_SHA }} make push
+
+      - name: Log in to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GOOGLE_CREDENTIALS }}
+
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
+        with:
+          service: 'a'
+          image: ${{ env.IMAGE_REGISTRY }}/${{ env.REGISTRY_USER }}/hockey-pool:${{ env.GITHUB_SHA }}
+
+      - name: Deploy result
+        run: curl "${{ steps.deploy.outputs.url }}"
