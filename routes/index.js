@@ -39,7 +39,7 @@ exports.predictions = function (req, res) {
 exports.predictionsSubmit = function (req, res) {
 
     const storage = new Storage();
-    const bucket = storage.bucket('misezsurlaglace-predictions');
+    const bucket = storage.bucket(roundRegistration.storageBucket);
     const file = bucket.file(`prediction-${moment().format()}.json`);
 
     const passthroughStream = new stream.PassThrough();
