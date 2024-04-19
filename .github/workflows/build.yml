@@ -39,6 +39,3 @@ jobs:
         with:
           service: 'a'
           image: ${{ env.IMAGE_REGISTRY }}/${{ env.REGISTRY_USER }}/hockey-pool:${{ github.sha }}
-
-      - name: Deploy result
-        run: curl "${{ steps.deploy.outputs.url }}"
