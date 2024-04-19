@@ -40,7 +40,7 @@ exports.predictionsSubmit = function (req, res) {
 
     const storage = new Storage();
     const bucket = storage.bucket(roundRegistration.storageBucket);
-    const file = bucket.file(`prediction-${moment().format()}.json`);
+    const file = bucket.file(`${roundRegistration.storageFolder}/prediction-${moment().format()}.json`);
 
     const passthroughStream = new stream.PassThrough();
     passthroughStream.write(JSON.stringify(req.body));
