@@ -4,37 +4,33 @@ var moment = require('moment');
 
 module.exports = {
     storageBucket: 'misezsurlaglace-predictions',
-    storageFolder: '/2024/1',
-    closingOn: moment('2024-04-20 17:00 -0400', 'YYYY-MM-DD HH:mm ZZ'),
-    round: 'nav.rounds.1',
-    roundPoints: 'points.rounds.1',
+    storageFolder: '/2024/2',
+    closingOn: moment('2024-05-05 16:00 -0400', 'YYYY-MM-DD HH:mm ZZ'),
+    round: 'nav.rounds.2',
+    roundPoints: 'points.rounds.2',
     predictions: [
         {
             section: 'atlantic',
             confrontations: [
-                ['fla', 'tbl'],
-                ['bos', 'tor']
+                ['fla', 'bos']
             ]
         },
         {
             section: 'metropolitan',
             confrontations: [
-                ['nyr', 'wsh'],
-                ['car', 'nyi']
+                ['nyr', 'car']
             ]
         },
-        {
-            section: 'central',
-            confrontations: [
-                ['dal', 'vgk'],
-                ['wpg', 'col']
-            ]
-        },
+        // {
+        //     section: 'central',
+        //     confrontations: [
+        //         ['X', 'col']
+        //     ]
+        // },
         {
             section: 'pacific',
             confrontations: [
-                ['van', 'nsh'],
-                ['edm', 'lak']
+                ['van', 'edm']
             ]
         }
     ]
