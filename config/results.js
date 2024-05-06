@@ -118,4 +118,74 @@ roundResults[1] = {
     ]
 };
 
+roundResults[2] = {
+    roundPoints: 'points.rounds.2',
+    pointScale: 2,
+    result: [
+
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['fla', 6],
+            ['car', 6],
+            //['', 6],
+            ['edm', 6]
+        ] },
+        { name: 'Richard', selections: [
+            ['fla', 6],
+            ['nyr', 6],
+            //['', 6],
+            ['van', 7]
+        ] },
+        { name: 'Antoine', selections: [
+            ['fla', 5],
+            ['nyr', 6],
+            //['', 6],
+            ['van', 6]
+        ] },
+        { name: 'Martin', selections: [
+            ['fla', 5],
+            ['nyr', 6],
+            //['', 6],
+            ['edm', 5]
+        ] },
+        { name: 'André', selections: [
+            ['fla', 6],
+            ['nyr', 7],
+            //['', 6],
+            ['edm', 7]
+        ] },
+        { name: 'Mom', selections: [
+            ['fla', 6],
+            ['nyr', 6],
+            //['', 6],
+            ['edm', 6]
+        ] },
+        { name: 'Alexandre G-P', selections: [
+            ['fla', 6],
+            ['nyr', 5],
+            //['', 6],
+            ['edm', 6]
+        ] },
+        { name: 'Eliane', selections: [
+            ['bos', 5],
+            ['nyr', 6],
+            //['', 6],
+            ['edm', 7]
+        ] },
+        { name: 'Johanne', selections: [
+            ['fla', 5],
+            ['nyr', 7],
+            //['', 6],
+            ['edm', 7]
+        ] },
+        { name: 'Marie-Christine', selections: [
+            ['fla', 5],
+            ['car', 5],
+            //['', 6],
+            ['van', 6]
+        ] }
+    ]
+};
+
 module.exports = roundResults;
