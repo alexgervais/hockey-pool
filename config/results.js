@@ -9,7 +9,7 @@ roundResults[1] = {
         ['bos', 7],
         ['nyr', 4],
         ['car', 5],
-        [],
+        ['dal', 7],
         ['col', 5],
         ['van', 6],
         ['edm', 5]
