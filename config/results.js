@@ -128,61 +128,61 @@ roundResults[2] = {
         { name: 'Alex', selections: [
             ['fla', 6],
             ['car', 6],
-            //['', 6],
+            ['col', 7],
             ['edm', 6]
         ] },
         { name: 'Richard', selections: [
             ['fla', 6],
             ['nyr', 6],
-            //['', 6],
+            ['col', 7],
             ['van', 7]
         ] },
         { name: 'Antoine', selections: [
             ['fla', 5],
             ['nyr', 6],
-            //['', 6],
+            ['dal', 6],
             ['van', 6]
         ] },
         { name: 'Martin', selections: [
             ['fla', 5],
             ['nyr', 6],
-            //['', 6],
+            ['col', 6],
             ['edm', 5]
         ] },
         { name: 'André', selections: [
             ['fla', 6],
             ['nyr', 7],
-            //['', 6],
+            ['col', 6],
             ['edm', 7]
         ] },
         { name: 'Mom', selections: [
             ['fla', 6],
             ['nyr', 6],
-            //['', 6],
+            ['col', 6],
             ['edm', 6]
         ] },
         { name: 'Alexandre G-P', selections: [
             ['fla', 6],
             ['nyr', 5],
-            //['', 6],
+            ['col', 6],
             ['edm', 6]
         ] },
         { name: 'Eliane', selections: [
             ['bos', 5],
             ['nyr', 6],
-            //['', 6],
+            ['col', 6],
             ['edm', 7]
         ] },
         { name: 'Johanne', selections: [
             ['fla', 5],
             ['nyr', 7],
-            //['', 6],
+            ['col', 5],
             ['edm', 7]
         ] },
         { name: 'Marie-Christine', selections: [
             ['fla', 5],
             ['car', 5],
-            //['', 6],
+            ['dal', 4],
             ['van', 6]
         ] }
     ]
