@@ -122,7 +122,10 @@ roundResults[2] = {
     roundPoints: 'points.rounds.2',
     pointScale: 2,
     result: [
-
+        ['fla', 6],
+        ['nyr', 6],
+        ['dal', 6],
+        ['edm', 7]
     ],
     participants: [
         { name: 'Alex', selections: [
