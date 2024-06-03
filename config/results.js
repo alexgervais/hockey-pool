@@ -196,7 +196,7 @@ roundResults[3] = {
     pointScale: 3,
     result: [
         ['fla', 6],
-        []
+        ['edm', 6]
     ],
     participants: [
         { name: 'Alex', selections: [
