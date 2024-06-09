@@ -242,4 +242,44 @@ roundResults[3] = {
     ]
 };
 
+roundResults[4] = {
+    roundPoints: 'points.rounds.4',
+    pointScale: 4,
+    result: [
+        []
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['edm', 4]
+        ] },
+        { name: 'Richard', selections: [
+            ['edm', 4]
+        ] },
+        { name: 'Antoine', selections: [
+            ['edm', 6]
+        ] },
+        { name: 'Martin', selections: [
+            ['edm', 4]
+        ] },
+        { name: 'André', selections: [
+            ['fla', 7]
+        ] },
+        { name: 'Mom', selections: [
+            ['fla', 6]
+        ] },
+        { name: 'Alexandre G-P', selections: [
+            ['edm', 7]
+        ] },
+        { name: 'Eliane', selections: [
+            ['fla', 6]
+        ] },
+        { name: 'Johanne', selections: [
+            ['edm', 6]
+        ] },
+        { name: 'Marie-Christine', selections: [
+            ['fla', 5]
+        ] }
+    ]
+};
+
 module.exports = roundResults;
