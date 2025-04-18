@@ -26,7 +26,7 @@ module.exports = {
         {
             section: 'central',
             confrontations: [
-                ['wgp', 'stl'],
+                ['wpg', 'stl'],
                 ['dal', 'col']
             ]
         },
