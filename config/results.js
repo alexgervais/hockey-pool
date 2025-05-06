@@ -1,6 +1,78 @@
 'use strict';
 
 var roundResults = [];
+roundResults[2] = {
+    roundPoints: 'points.rounds.2',
+    pointScale: 2,
+    result: [
+        // ['tor', 6],
+        // ['fla', 5],
+        // ['wsh', 5],
+        // ['edm', 6]
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['fla', 7],
+            ['wsh', 6],
+            ['dal', 6],
+            ['vgk', 7]
+        ] },
+        { name: 'Martin', selections: [
+            ['fla', 6],
+            ['wsh', 5],
+            ['dal', 5],
+            ['edm', 7]
+        ] },
+        { name: 'Johanne', selections: [
+            ['fla', 6],
+            ['wsh', 6],
+            ['dal', 6],
+            ['vgk', 7]
+        ] },
+        { name: 'Eliane', selections: [
+            ['fla', 6],
+            ['wsh', 7],
+            ['dal', 6],
+            ['vgk', 7]
+        ] },
+        { name: 'Antoine', selections: [
+            ['fla', 6],
+            ['car', 6],
+            ['dal', 6],
+            ['edm', 6]
+        ] },
+        { name: 'Richard', selections: [
+            ['fla', 6],
+            ['wsh', 7],
+            ['dal', 6],
+            ['edm', 7]
+        ] },
+        { name: 'André', selections: [
+            ['fla', 6],
+            ['wsh', 7],
+            ['wpg', 6],
+            ['edm', 7]
+        ] },
+        { name: 'Mom', selections: [
+            ['fla', 6],
+            ['wsh', 6],
+            ['wpg', 7],
+            ['edm', 7]
+        ] },
+        { name: 'Marie-Christine', selections: [
+            ['fla', 7],
+            ['car', 5],
+            ['wpg', 4],
+            ['edm', 7]
+        ] },
+        { name: 'Alex G P / Mike Chez Rona', selections: [
+            ['tor', 4],
+            ['car', 4],
+            ['wpg', 4],
+            ['vgk', 4]
+        ] },
+    ]
+};
 roundResults[1] = {
     roundPoints: 'points.rounds.1',
     pointScale: 1,
