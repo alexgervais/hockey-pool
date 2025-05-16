@@ -6,9 +6,9 @@ roundResults[2] = {
     pointScale: 2,
     result: [
         // ['tor', 6],
-        // ['fla', 5],
+         ['car', 5],
         // ['wsh', 5],
-        // ['edm', 6]
+         ['edm', 5]
     ],
     participants: [
         { name: 'Alex', selections: [
