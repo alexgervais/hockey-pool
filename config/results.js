@@ -5,9 +5,9 @@ roundResults[2] = {
     roundPoints: 'points.rounds.2',
     pointScale: 2,
     result: [
-        // ['tor', 6],
+         [],
          ['car', 5],
-        // ['wsh', 5],
+         [],
          ['edm', 5]
     ],
     participants: [
