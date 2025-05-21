@@ -1,6 +1,48 @@
 'use strict';
 
 var roundResults = [];
+roundResults[3] = {
+    roundPoints: 'points.rounds.3',
+    pointScale: 3,
+    result: [
+         //[],
+         //[]
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['car', 7],
+            ['dal', 6]
+        ] },
+        { name: 'Martin', selections: [
+            ['fla', 5],
+            ['edm', 7]
+        ] },
+        { name: 'Johanne', selections: [
+            ['car', 7],
+            ['dal', 7]
+        ] },
+        { name: 'Eliane', selections: [
+            ['fla', 6],
+            ['dal', 7]
+        ] },
+        { name: 'Antoine', selections: [
+            ['fla', 5],
+            ['edm', 7]
+        ] },
+        { name: 'Richard', selections: [
+            ['fla', 7],
+            ['dal', 6]
+        ] },
+        { name: 'André', selections: [
+            ['fla', 7],
+            ['edm', 6]
+        ] },
+        { name: 'Mom', selections: [
+            ['car', 7],
+            ['dal', 7]
+        ] },
+    ]
+};
 roundResults[2] = {
     roundPoints: 'points.rounds.2',
     pointScale: 2,
