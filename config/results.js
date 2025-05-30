@@ -5,8 +5,8 @@ roundResults[3] = {
     roundPoints: 'points.rounds.3',
     pointScale: 3,
     result: [
-         //[],
-         //[]
+         ['fla', 5],
+         ['edm', 5]
     ],
     participants: [
         { name: 'Alex', selections: [
