@@ -5,7 +5,7 @@ var moment = require('moment');
 module.exports = {
     storageBucket: 'misezsurlaglace-predictions',
     storageFolder: '/2026/1',
-    closingOn: moment('2025-06-04 20:00 -0400', 'YYYY-MM-DD HH:mm ZZ'),
+    closingOn: moment('2026-04-18 15:00 -0400', 'YYYY-MM-DD HH:mm ZZ'),
     round: 'nav.rounds.1',
     roundPoints: 'points.rounds.1',
     predictions: [
