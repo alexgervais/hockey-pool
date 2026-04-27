@@ -7,9 +7,9 @@ roundResults[1] = {
     result: [
         [],
         [],
-        ['car', 4]
-        // [],
-        // ['tor', 5]
+        ['car', 4],
+        [],
+        ['col', 4]
     ],
     participants: [
         { name: 'Alex', selections: [
