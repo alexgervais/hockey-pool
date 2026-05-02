@@ -5,7 +5,7 @@ roundResults[1] = {
     roundPoints: 'points.rounds.1',
     pointScale: 1,
     result: [
-        [],
+        ['buf', 6],
         [],
         ['car', 4],
         ['phi', 6],
