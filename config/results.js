@@ -6,12 +6,12 @@ roundResults[1] = {
     pointScale: 1,
     result: [
         ['buf', 6],
-        [],
+        ['mtl', 7],
         ['car', 4],
         ['phi', 6],
         ['col', 4],
         ['min', 6],
-        [],
+        ['vgk', 6],
         ['ana', 6]
     ],
     participants: [
