@@ -127,5 +127,81 @@ roundResults[1] = {
         ] },
     ]
 };
+roundResults[2] = {
+    roundPoints: 'points.rounds.2',
+    pointScale: 2,
+    result: [
+        // ['', 6],
+        // ['', 6]
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['mtl', 6],
+            ['car', 4],
+            ['col', 5],
+            ['vgk', 6]
+        ] },
+        { name: 'Mom', selections: [
+            ['mtl', 6],
+            ['car', 6],
+            ['col', 6],
+            ['vgk', 5]
+        ] },
+        { name: 'André', selections: [
+            ['mtl', 7],
+            ['car', 5],
+            ['col', 5],
+            ['vgk', 7]
+        ] },
+        { name: 'Eliane', selections: [
+            ['mtl', 6],
+            ['car', 6],
+            ['col', 7],
+            ['vgk', 6]
+        ] },
+        { name: 'Martin', selections: [
+            ['buf', 5],
+            ['car', 5],
+            ['col', 7],
+            ['ana', 6]
+        ] },
+        { name: 'Alex GP', selections: [
+            ['mtl', 6],
+            ['car', 5],
+            ['min', 7],
+            ['vgk', 6]
+        ] },
+        { name: 'Richard', selections: [
+            ['mtl', 6],
+            ['car', 5],
+            ['col', 6],
+            ['vgk', 6]
+        ] },
+        { name: 'Antoine', selections: [
+            ['mtl', 6],
+            ['car', 5],
+            ['col', 6],
+            ['ana', 6]
+        ] },
+        { name: 'Johanne', selections: [
+            ['mtl', 7],
+            ['car', 5],
+            ['col', 5],
+            ['ana', 6]
+        ] },
+        { name: 'Marie-Christine', selections: [
+            ['mtl', 7],
+            ['phi', 6],
+            ['min', 6],
+            ['vgk', 5]
+        ] },
+        { name: 'Minh Anh', selections: [
+            ['mtl', 6],
+            ['phi', 7],
+            ['col', 6],
+            ['ana', 6]
+        ] },
+    ]
+};
 
 module.exports = roundResults;
