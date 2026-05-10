@@ -131,7 +131,8 @@ roundResults[2] = {
     roundPoints: 'points.rounds.2',
     pointScale: 2,
     result: [
-        // ['', 6],
+        [],
+        ['car', 4],
         // ['', 6]
     ],
     participants: [
