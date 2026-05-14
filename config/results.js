@@ -133,6 +133,7 @@ roundResults[2] = {
     result: [
         [],
         ['car', 4],
+        ['col', 5]
         // ['', 6]
     ],
     participants: [
