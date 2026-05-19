@@ -2,16 +2,16 @@
 
 module.exports = {
     participants: [
-        {name: 'Alex', points: [7]},
-        {name: 'Alex G-P', points: [5]},
-        {name: 'André', points: [6]},
-        {name: 'Antoine', points: [8]},
-        {name: 'Eliane', points: [8]},
-        {name: 'Johanne', points: [6]},
-        {name: 'Marie-Christine', points: [4]},
-        {name: 'Martin', points: [4]},
-        {name: 'Minh Anh', points: [6]},
-        {name: 'Mom', points: [6]},
-        {name: 'Richard', points: [6]}
+        {name: 'Alex', points: [7, 14]},
+        {name: 'Alex G-P', points: [5, 8]},
+        {name: 'André', points: [6, 12]},
+        {name: 'Antoine', points: [8, 6]},
+        {name: 'Eliane', points: [8, 10]},
+        {name: 'Johanne', points: [6, 10]},
+        {name: 'Marie-Christine', points: [4, 6]},
+        {name: 'Martin', points: [4, 4]},
+        {name: 'Minh Anh', points: [6, 4]},
+        {name: 'Mom', points: [6, 8]},
+        {name: 'Richard', points: [6, 10]}
     ]
 };
