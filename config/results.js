@@ -205,5 +205,59 @@ roundResults[2] = {
         ] },
     ]
 };
+roundResults[3] = {
+    roundPoints: 'points.rounds.3',
+    pointScale: 3,
+    result: [
+        [],
+        []
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['mtl', 7],
+            ['col', 5]
+        ] },
+        { name: 'Mom', selections: [
+            ['car', 7],
+            ['col', 5]
+        ] },
+        { name: 'André', selections: [
+            ['mtl', 7],
+            ['col', 4]
+        ] },
+        { name: 'Eliane', selections: [
+            ['mtl', 6],
+            ['col', 6]
+        ] },
+        { name: 'Martin', selections: [
+            ['car', 5],
+            ['col', 5]
+        ] },
+        { name: 'Alex GP', selections: [
+            ['mtl', 7],
+            ['col', 6]
+        ] },
+        { name: 'Richard', selections: [
+            ['mtl', 6],
+            ['col', 6]
+        ] },
+        { name: 'Antoine', selections: [
+            ['mtl', 6],
+            ['col', 5]
+        ] },
+        { name: 'Johanne', selections: [
+            ['mtl', 7],
+            ['col', 6]
+        ] },
+        { name: 'Marie-Christine', selections: [
+            ['mtl', 6],
+            ['col', 6]
+        ] },
+        { name: 'Minh Anh', selections: [
+            ['mtl', 7],
+            ['col', 6]
+        ] },
+    ]
+};
 
 module.exports = roundResults;
