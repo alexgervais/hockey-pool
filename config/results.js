@@ -210,7 +210,7 @@ roundResults[3] = {
     pointScale: 3,
     result: [
         [],
-        []
+        ['vgk', 4]
     ],
     participants: [
         { name: 'Alex', selections: [
