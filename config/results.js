@@ -259,5 +259,44 @@ roundResults[3] = {
         ] },
     ]
 };
+roundResults[4] = {
+    roundPoints: 'points.rounds.4',
+    pointScale: 4,
+    result: [
+        []
+    ],
+    participants: [
+        { name: 'Alex', selections: [
+            ['car', 5]
+        ] },
+        { name: 'Mom', selections: [
+            ['vgk', 6]
+        ] },
+        { name: 'André', selections: [
+            ['car', 6]
+        ] },
+        { name: 'Eliane', selections: [
+            ['car', 6]
+        ] },
+        { name: 'Martin', selections: [
+            ['car', 6]
+        ] },
+        { name: 'Richard', selections: [
+            ['car', 4]
+        ] },
+        { name: 'Antoine', selections: [
+            ['car', 5]
+        ] },
+        { name: 'Johanne', selections: [
+            ['vgk', 5]
+        ] },
+        { name: 'Marie-Christine', selections: [
+            ['vgk', 6]
+        ] },
+        { name: 'Minh Anh', selections: [
+            ['car', 5]
+        ] },
+    ]
+};
 
 module.exports = roundResults;
