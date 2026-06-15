@@ -263,7 +263,7 @@ roundResults[4] = {
     roundPoints: 'points.rounds.4',
     pointScale: 4,
     result: [
-        []
+        ['car', 6]
     ],
     participants: [
         { name: 'Alex', selections: [
